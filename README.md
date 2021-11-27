@@ -6,7 +6,7 @@
 - This macos-css comes with,
     - Time (Seconds also can be viewed)
     - Finder UI
-    - Day and Night wallpapers (after 7pm, it turns in to night wallpaper)
+    - Day and Night wallpapers (after 6pm, it turns in to night wallpaper)
     - Calender
     - A notification banner
     - Settings UI
