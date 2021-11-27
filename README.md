@@ -13,6 +13,7 @@
     - Menu UI
     - A Messenger app UI
     - Right click (Only Refresh is available)
+    - Lock screen
 ---
 > #### 🛑 Password = 123
 ---
