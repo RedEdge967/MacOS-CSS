@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>macOS in SCSS</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<link rel='stylesheet' href='https://codepen.io/Varo/pen/vLdvMK.css'>
+<link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&amp;display=swap'><link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+s<body class="night">
+	<div class="sPanel sPanelTest round disabled"></div>
+	<div class="lockScreen" sysDesktopBackground>
+		<div class="user" data-user="Álvaro Hernández"></div>
+		<div class="lockScreenLogIn"><input type="password" class="systemLockInput" placeholder="Enter Password"
+				autocomplete="off" />
+			<div class="login empty"></div>
+		</div>
+	</div>
+	
+	<div class="taskbar">
+		<div class="taskbarApp" data-trigger="sAppsMenu"><i class="icon" data-icon="launchpad"></i></div>
+		<div class="taskbarApp open" data-window="files"><i class="icon" data-icon="finder"></i></div>
+		<div class="taskbarApp open" data-window="safari"><i class="icon" data-icon="safari"></i></div>
+		<div class="taskbarApp open" data-window="messages"><i class="icon" data-icon="messages"></i></div>
+		<div class="taskbarApp open" data-window="calendar"><i class="icon" data-icon="calendar"></i></div>
+		<div class="sep"></div>
+		<div class="taskbarApp open" data-window="preferences"><i class="icon" data-icon="preferences"></i></div>
+	</div>
+	
+	<div class="appMenu" sysDesktopBackgroundBlur>
+		<div class="closeAppsMenu"></div>
+
+		<label class="searchApp"><i></i><input type="text" placeholder="Search" data-search spellcheck="false"
+				class="appMenuSearch" /></label>
+
+		<div class="page appMenuAppList">
+			<div class="closeAppsMenu"></div>
+			<div class="app" data-filter-item data-filters="finder">
+				<div class="icon" data-icon="finder" data-window="files"></div>
+				<div class="name">Finder</div>
+			</div>
+			<div class="app" data-filter-item data-filters="safari">
+				<div class="icon" data-icon="safari" data-window="safari"></div>
+				<div class="name">Safari</div>
+			</div>
+			<div class="app" data-filter-item data-filters="messages">
+				<div class="icon" data-icon="messages" data-window="messages"></div>
+				<div class="name">Messages</div>
+			</div>
+			<div class="app" data-filter-item data-filters="calendar">
+				<div class="icon" data-icon="calendar" data-window="calendar"></div>
+				<div class="name">Calendar</div>
+			</div>
+			<div class="app" data-filter-item data-filters="system preferences">
+				<div class="icon" data-icon="preferences" data-window="preferences"></div>
+				<div class="name">System Preferences</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="actionbar">
+
+		<div class="leftActions">
+			<div class="item" data-trigger="sPanelLogOptions"></div>
+			<div class="group" data-app="finder">
+				<div class="item bold" data-trigger="sPanelAppFinderOptions">Finder</div>
+				<div class="item" data-trigger="sPanelAppFinderOptionFile">File</div>
+				<div class="item" data-trigger="sPanelAppFinderOptionEdit">Edit</div>
+				<div class="item" data-trigger="sPanelAppFinderOptionView">View</div>
+				<div class="item" data-trigger="sPanelAppFinderOptionGo">Go</div>
+				<div class="item" data-trigger="sPanelAppFinderOptionWindow">Window</div>
+				<div class="item" data-trigger="sPanelAppFinderOptionHelp">Help</div>
+			</div>
+		</div>
+
+		<div class="rightActions">
+			<div class="item" data-trigger="sPanelBluetooth" data-connected=""></div>
+			<div class="item" data-trigger="sPanelPower" data-percentage="74" sPowerShowPercentage="true"><i></i></div>
+			<div class="item sActionbarTime" data-trigger="sPanelTime"></div>
+			<div class="item sActionbarNotifications hasNotifications" data-trigger="sPanelNotifications"></div>
+		</div>
+
+	</div>
+	<!-- sPanel collection -->
+	<!-- sPanelAux -->
+	<div class="sPanel sPanelAux default round"></div>
+	<!-- LeftActions -->
+	<div class="sPanel sPanelLogOptions default round sActionbarPanel">
+		<div class="info clickable">About this mac</div>
+		<div class="sep"></div>
+		<div class="info clickable" data-trigger="window" data-window="preferences">System Preferences...</div>
+		<div class="info clickable">App Store...</div>
+		<div class="sep"></div>
+		<div class="info clickable" data-tigger="sActionSleep">Sleep</div>
+		<div class="info clickable">Restart...</div>
+		<div class="info clickable">Shut Down...</div>
+		<div class="sep"></div>
+		<div class="info clickable" data-trigger="sActionLogout" data-after="Varo" data-afterAppend="...">Log out </div>
+	</div>
+	<!-- Finder -->
+	<div class="sPanel sPanelAppFinderOptions default round sActionbarPanel">
+		<div class="info clickable">About Finder</div>
+		<div class="sep"></div>
+		<div class="info clickable" data-triggerWindow="preferences">Preferences...</div>
+		<div class="sep"></div>
+		<div class="info clickable disabled" data-triggerWindow="finder">Empty trash...</div>
+		<div class="sep"></div>
+		<div class="info menu">Services
+			<div class="submenu">
+				<div class="info block clear">Images</div>
+				<div class="info clickable">Import images</div>
+				<div class="sep"></div>
+				<div class="info block clear">Development</div>
+				<div class="info clickable">Activity Monitor</div>
+				<div class="info clickable">Allocations & Leaks</div>
+				<div class="info clickable">File Activity</div>
+				<div class="info clickable">System Trace</div>
+				<div class="info clickable">Activity Monitor</div>
+				<div class="info clickable">Time Profile Active Application</div>
+				<div class="info clickable">Time Profile App Under Mouse</div>
+				<div class="info clickable">Time Profile Entire System</div>
+				<div class="info clickable">Toggle Instruments Recording</div>
+			</div>
+		</div>
+		<div class="sep"></div>
+		<div class="info clickable">Hide Finder</div>
+		<div class="info clickable">Hide others</div>
+		<div class="info clickable">Show all</div>
+	</div>
+	<!-- Finder > File -->
+	<div class="sPanel sPanelAppFinderOptionFile default round sActionbarPanel">
+		<div class="info clickable">New Finder Window</div>
+		<div class="info clickable disabled">New Folder</div>
+		<div class="info clickable disabled">New Folder with Selection</div>
+		<div class="info clickable disabled">New Smart Folder</div>
+		<div class="info clickable disabled">New Tab</div>
+		<div class="info clickable disabled">Open</div>
+		<div class="info clickable menu disabled">Open With
+			<div class="submenu">
+				<div class="info clickable">Finder</div>
+				<div class="info clickable">Safari</div>
+			</div>
+		</div>
+		<div class="info clickable disabled">Print</div>
+		<div class="info clickable">Close Window</div>
+		<div class="sep"></div>
+		<div class="info clickable">Get Info</div>
+		<div class="info clickable disabled">Rename</div>
+		<div class="sep"></div>
+		<div class="info clickable disabled">Compress</div>
+		<div class="sep"></div>
+		<div class="info clickable disabled">Duplicate</div>
+		<div class="info clickable disabled">Make Alias</div>
+		<div class="info clickable">Quick Look</div>
+		<div class="info clickable disabled">Show In Enclosing Folder</div>
+		<div class="info clickable disabled">Add to Dock</div>
+		<div class="sep"></div>
+		<div class="info clickable">Move to Trash</div>
+		<div class="info clickable disabled">Eject</div>
+		<div class="sep"></div>
+		<div class="info clickable">Find</div>
+		<div class="sep"></div>
+		<div class="info clickable disabled">Tags...</div>
+	</div>
+	<!-- Finder > Edit -->
+	<div class="sPanel sPanelAppFinderOptionEdit default round sActionbarPanel">
+		<div class="info clickable">Undo</div>
+		<div class="info clickable disabled">Redo</div>
+		<div class="sep"></div>
+		<div class="info clickable disabled">Cut</div>
+		<div class="info clickable disabled">Copy</div>
+		<div class="info clickable disabled">Paste</div>
+		<div class="info clickable">Select All</div>
+		<div class="sep"></div>
+		<div class="info clickable">Show Clipboard</div>
+		<div class="sep"></div>
+		<div class="info clickable disabled">Start Dictation</div>
+		<div class="info clickable">Emojis & Symbols</div>
+	</div>
+	<!-- Finder > View -->
+	<div class="sPanel sPanelAppFinderOptionView default round sActionbarPanel">
+		<div class="info clickable checkable" data-checked="true">as Icons</div>
+		<div class="info clickable checkable">as List</div>
+		<div class="info clickable checkable">as Columns</div>
+		<div class="info clickable checkable">as Cover Flow</div>
+		<div class="sep"></div>
+		<div class="info clickable">Clean Up</div>
+		<div class="info clickable menu disabled">Clean Up By
+			<div class="submenu">
+			</div>
+		</div>
+		<div class="info clickable menu disabled">Arrange By
+			<div class="submenu">
+				<div class="info clickable">Name</div>
+				<div class="info clickable">Class</div>
+				<div class="info clickable">Modification Date</div>
+				<div class="info clickable">Creation Date</div>
+				<div class="info clickable">Size</div>
+				<div class="info clickable">Tags</div>
+			</div>
+		</div>
+		<div class="sep"></div>
+		<div class="info clickable">Show Task Bar</div>
+		<div class="info clickable">Show Path Bar</div>
+		<div class="info clickable">Hide Status Bar</div>
+		<div class="info clickable">Hide Sidebar</div>
+		<div class="info clickable">Show Preview</div>
+		<div class="sep"></div>
+		<div class="info clickable">Hide Toolbar</div>
+		<div class="info clickable">Customize Toolbar...</div>
+		<div class="sep"></div>
+		<div class="info clickable">Show View Options</div>
+		<div class="info clickable">Enter Full Screen</div>
+	</div>
+
+	<!-- Finder > Go -->
+	<div class="sPanel sPanelAppFinderOptionGo default round sActionbarPanel">
+		<div class="info clickable disabled">Back</div>
+		<div class="info clickable disabled">Forward</div>
+		<div class="info clickable disabled">Select Startup Disk on Desktop</div>
+		<div class="sep"></div>
+		<div class="info clickable">All My Files</div>
+		<div class="info clickable">Documents</div>
+		<div class="info clickable">Desktop</div>
+		<div class="info clickable">Downloads</div>
+		<div class="info clickable">Home</div>
+		<div class="info clickable">Computer</div>
+		<div class="info clickable">AirDrop</div>
+		<div class="info clickable">Network</div>
+		<div class="info clickable">iCloud Drive</div>
+		<div class="info clickable">Applications</div>
+		<div class="info clickable">Utilities</div>
+		<div class="sep"></div>
+		<div class="info clickable menu">Recent Folders
+			<div class="submenu">
+				<div class="info clickable">Documents</div>
+				<div class="info clickable">School</div>
+				<div class="info clickable">Projects</div>
+			</div>
+		</div>
+		<div class="sep"></div>
+		<div class="info clickable">Go to Folder...</div>
+		<div class="info clickable">Connect to Server...</div>
+	</div>
+	<!-- Finder > Window -->
+	<div class="sPanel sPanelAppFinderOptionWindow default round sActionbarPanel">
+		<div class="info clickable disabled">Minimize</div>
+		<div class="info clickable disabled">Zoom</div>
+		<div class="info clickable disabled">Move window to left screen side</div>
+		<div class="info clickable disabled">Move window to right screen side</div>
+		<div class="info clickable disabled">Go to window</div>
+		<div class="sep"></div>
+		<div class="info clickable disabled">Show previous Tab</div>
+		<div class="info clickable disabled">Show next Tab</div>
+		<div class="info clickable disabled">Move Tab to a New Window</div>
+		<div class="info clickable disabled">Merge All Windows</div>
+		<div class="sep"></div>
+		<div class="info clickable">Move everything to front</div>
+	</div>
+	<!-- Finder > Help -->
+	<div class="sPanel sPanelAppFinderOptionHelp default round sActionbarPanel">
+		<div class="info input">Search<input type="text" /></div>
+		<div class="info clickable">Get macOS Help</div>
+	</div>
+
+	<!-- RightActions -->
+	<!-- Bluetooth -->
+	<div class="sPanel sPanelBluetooth default round sActionbarPanel">
+		<div class="info block clear" data-before="Bluetooth: ">on</div>
+		<div class="info clickable">Turn Bluetooth Off</div>
+		<div class="sep"></div>
+		<div class="info block clear">Devices</div>
+		<div class="info menu active">Beats Studio
+			<div class="submenu">
+				<div class="info clickable">Disconnect</div>
+				<div class="info block clear" data-after="83" data-afterAppend="%">Battery level: </div>
+				<div class="sep"></div>
+				<div class="info clickable">Open Device Preferences...</div>
+			</div>
+		</div>
+		<div class="info menu active">Logitech Keyboard K380
+			<div class="submenu">
+				<div class="info clickable">Disconnect</div>
+				<div class="info block clear" data-after="57" data-afterAppend="%">Battery level: </div>
+				<div class="sep"></div>
+				<div class="info clickable">Open Device Preferences...</div>
+			</div>
+		</div>
+		<div class="info menu">Magic Trackpad 2
+			<div class="submenu">
+				<div class="info clickable">Connect</div>
+				<div class="sep"></div>
+				<div class="info clickable">Open Device Preferences...</div>
+			</div>
+		</div>
+		<div class="sep"></div>
+		<div class="info clickable" data-trigger="window" data-window="preferences">Open Bluetooth Preferences...</div>
+	</div>
+
+	<!-- Power Management-->
+	<div class="sPanel sPanelPower default round sActionbarPanel">
+		<div class="info block clear" data-after="74" data-afterAppend="%">Battery level: </div>
+		<div class="info block clear" data-after="battery">Power source: </div>
+		<div class="sep"></div>
+		<div class="info block clear">Apps Using Significant Energy</div>
+		<div class="info app clickable" data-after="Finder" data-trigger="window" data-window="files"><i class="icon" data-icon="finder"></i></div>
+		<div class="info app clickable" data-after="Messages" data-trigger="window" data-window="messages"><i class="icon" data-icon="messages"></i></div>
+		<div class="sep"></div>
+		<div class="info clickable checkable" data-trigger="sPowerShowPercentage" data-checked="true">Show percentage</div>
+		<div class="info clickable" data-trigger="window" data-window="preferences">Open Battery Preferences...</div>
+	</div>
+
+	<!-- Time & Date -->
+	<div class="sPanel sPanelTime default round sActionbarPanel">
+		<div class="info block clear" data-sGet="fullDate"></div>
+		<div class="info clickable" data-trigger="window" data-window="calendar">Open Calendar...</div>
+		<div class="sep"></div>
+		<div class="info clickable checkable" data-trigger="sTimeShowDate" data-checked="true">Show date</div>
+		<div class="info clickable checkable" data-trigger="sTimeShowSeconds" data-checked>Show seconds</div>
+		<div class="sep"></div>
+		<div class="info clickable" data-trigger="window" data-window="preferences">Open Date & Time Preferences...</div>
+	</div>
+
+	<div class="sPanel sPanelNotifications sidepanel scrollable" style="width:350px;">
+		<div class="switch" sSwitch>
+			<div class="select">
+				<div class="option active" sSwitchShow="widgets">Today</div>
+				<div class="option" sSwitchShow="notifications">Notifications</div>
+			</div>
+		</div>
+		<!-- Widgets -->
+		<div sSwitchId="widgets" sSwitchVisibility="enabled">
+			<div class="date"><span class="today"></span><span class="weather">
+					<div class="icon" data-icon="cloudly"></div>Cloudly today. It's currently 23º; the high will be 27º.
+				</span></div>
+			<div class="widget reminders">
+				<div class="name">
+					<div class="icon" data-icon="reminders"></div>Reminders
+				</div>
+				<ul>
+					<li>
+						<div class="canCheck"></div>Code awesome things
+					</li>
+					<li>
+						<div class="canCheck"></div>Drink water 🥤
+					</li>
+					<li>
+						<div class="canCheck"></div>Sleep at least 8h
+					</li>
+				</ul>
+			</div>
+			<div class="widget miniPlayer">
+				<div class="name">
+					<div class="icon" data-icon="podcast"></div>Podcast
+				</div>
+				<div class="z-index">
+					<div class="cover" style="background-image: url('https://raw.githubusercontent.com/aboredvaro/codepen_resources/main/macOS/img/appSupport/podcasts/downloads/cover/loopinfinito.jpg');"></div>
+				</div>
+				<div class="title" data-title="iCloud+ y Private relay, por dentro" data-author="Loop Infinito (by Applesfera)"></div>
+				<div class="controls">
+					<div class="timeNav" id="nWtime">
+						<div class="handler" id="nWtimeH" style="width:0%"></div>
+						<div class="timeCurrent">0:00</div>
+						<div class="timeRemaining">29:20</div>
+					</div>
+					<div class="btn prev"></div>
+					<div class="btn play"></div>
+					<div class="btn next"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Widgets END -->
+		<!-- Notifications -->
+		<div sSwitchId="notifications" sSwitchVisibility="disabled" data-ifEmpty="No new notifications">
+			<div class="item">
+				<div class="name">
+					<div class="icon" data-icon="messages"></div>Messages<div class="updateTime" data-time="2m ago"></div>
+				</div><b>Jake</b><br>No offense, but I prefer tabs over spaces
+			</div>
+			<div class="item">
+				<div class="name">
+					<div class="icon" data-icon="messages"></div>Messages<div class="updateTime" data-time="5m ago"></div>
+				</div><b>Vanessa</b><br>See you tomorrow! ❤️
+			</div>
+			<div class="item">
+				<div class="name">
+					<div class="icon" data-icon="messages"></div>Messages<div class="updateTime" data-time="6m ago"></div>
+				</div><b>Vanessa</b><br>Good night
+			</div>
+			<div class="item">
+				<div class="name">
+					<div class="icon" data-icon="apple_mail"></div>Codepen Support<div class="updateTime" data-time="1h ago"></div>
+				</div>
+				Verify your email<span class="dot"></span>Click this link to verify your email on Codepen: https://www.c...
+			</div>
+		</div>
+		<!-- Notifications END -->
+	</div>
+
+	<!-- sPanel collection END -->
+	<div class="desktop" sysDesktopBackground>
+
+		<div class="window nocm window--messages window--minimized" data-windowBackdrop="true" data-window="messages"
+			style="min-width:710px;height:500px;width:710px;min-height:500px;top:100px;left:400px;">
+			<div class="window__handler">
+				<div class="window__controls">
+					<a class="window__close"></a>
+					<a class="window__minimize"></a>
+					<a class="window__maximize disabled"></a>
+				</div>
+				<input type="text" class="search" placeholder="Search" />
+				<div class="new"></div>
+				<div class="chatNav">
+					<div class="user" style="background-image:url(https://bit.ly/34bzuZO);" data-name="Kathleen" data-state="online">
+					</div>
+				</div>
+			</div>
+
+			<div class="window__body">
+				<div class="sidebar" data-display="cards">
+					<div class="card unread" style="background-image:url(https://bit.ly/348OF5Q);">
+						<div class="data" data-date="2m ago" data-bubbles="1"></div><span data-title="Jake"
+							data-subtitle="No offense, but I prefer tabs over spaces"></span>
+					</div>
+					<div class="card unread" style="background-image:url(https://bit.ly/2E1QnLN);">
+						<div class="data" data-date="5m ago" data-bubbles="2"></div><span data-title="Vanessa"
+							data-subtitle="See you tomorrow! ❤️Good night"></span>
+					</div>
+					<div class="card active" style="background-image:url(https://bit.ly/34bzuZO);">
+						<div class="data" data-date="2h ago"></div><span data-title="Kathleen"
+							data-subtitle="OMG He's so cute! 😍"></span>
+					</div>
+					<div class="card" style="background-image:url(https://bit.ly/38gg210);">
+						<div class="data" data-date="5h ago"></div><span data-title="Aidan"
+							data-subtitle="Wanna hang out tomorrow morning?"></span>
+					</div>
+				</div>
+
+				<div class="window__main hasSideBarCards messages"><span class="message mine"><span>Hey Kathleen, how are you going?
+							😊</span></span><span class="message"><span>Great, thank you!</span></span><span class="message"><span>I'm taking
+							some pictures of Mr. Bites right now 😍</span></span><span class="message mine"><span>How is Mr.
+							Bites?</span></span><span class="message"><span>Mr. Bites misses you!</span></span><img
+						src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=912&q=80"
+						class="message" /><span class="message mine"><span>OMG He's so cute! 😍</span></span>
+				</div>
+
+				<div class="chatbox">
+					<div class="audioMargin"><input type="text" placeholder="Message" />
+						<div class="emoji"></div>
+					</div>
+					<div class="audio">
+						<div class="cancel"></div><span class="audioDuration">00:00</span>
+						<div class="trigger"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="window nocm window--preferences window--minimized" data-window="preferences"
+			style="min-width:750px;height:530px;width:750px;min-height:530px;top:20%;left:35%;max-width:750px;max-height:530px;" handler="extended" resizable="false">
+			<div class="window__handler">
+				<div class="window__title">System Preferences</div>
+				<div class="window__controls">
+					<a class="window__close"></a>
+					<a class="window__minimize"></a>
+					<a class="window__maximize disabled"></a>
+				</div>
+				<div class="window__actions">
+					<a class="nav prev disabled"></a>
+					<a class="nav next disabled"></a>
+					<a class="nav home"></a>
+					<a class="search"><i></i><input type="text" class="filesysSearch" placeholder="Search" spellcheck="false" autocomplete="off"/></a>
+				</div>
+			</div>
+			<div class="window__body">
+				<div class="window__main">
+					<div class="list">
+						<table>
+							<tr>
+								<td>Desktop and Screensaver:</td>
+								<td><label class="item canCheck"><input type="checkbox" class="sDynamicWallpaper" checked/>Dynamic
+										Wallpaper<span class="description">Wallpaper will change to night mode from 18:00 to 7:00.<br>By default it
+											will display night mode wallpaper.</span></label></td>
+							</tr>
+							<tr>
+								<td>Taskar:</td>
+								<td><label class="item canCheck"><input type="checkbox" class="sAnimateAppsIconOnOpen" checked/>Bounce app
+										icons<span class="description">When the app opens the app icon in the taskbar will bounce.</span></label></td>
+							</tr>
+							<tr>
+								<td>Time:</td>
+								<td><label class="item canCheck"><input type="checkbox" class="sTimeShowSeconds" />Show seconds</label><label
+										class="item canCheck"><input type="checkbox" class="sTimeShowDate" checked/>Show date<span
+											class="description">Day and month.</span></label></td>
+							</tr>
+							<tr>
+								<td>Battery:</td>
+								<td><label class="item canCheck"><input type="checkbox" class="sPowerShowPercentage" checked/>Show battery
+										percentage<span class="description">Remaining battery percentage will be displayed.</span></label></td>
+							</tr>
+							<tr>
+								<td>Experimental:</td>
+								<td><label class="enableTestPanel"><button type="button">Toggle Dev Panel</button></label><br><br><label
+										class="clickable" data-trigger="window" data-window="terminal"><button type="button">Open terminal window</button></label><br><br><label
+										class="testCreateW"><button type="button">CreateWindow</button></label><br><br><label
+										class="testCreateWi"><button type="button">CreateWindow (with image)</button></label></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="window window--files window--finder window--minimized" data-windowBackdrop="true" data-window="files"
+			style="min-width:600px;width:720px;min-height:390px;height:480px;top:200px;left:600px;" title="dynamic">
+			<div class="window__handler">
+				<div class="window__title">📁Documents</div>
+				<div class="window__controls">
+					<a class="window__close"></a>
+					<a class="window__minimize"></a>
+					<a class="window__maximize"></a>
+				</div>
+				<div class="window__actions">
+					<a class="nav prev disabled"></a>
+					<a class="nav next disabled"></a>
+
+					<a class="search"><i></i><input type="text" class="filesysSearch" placeholder="Search" spellcheck="false" autocomplete="off"/></a>
+				</div>
+			</div>
+			<div class="window__body">
+				<div class="sidebar" data-display="items">
+					<div class="title" data-group="favorites">Favorites</div>
+					<div class="item" data-item="recents">Recents</div>
+					<div class="item" data-item="downloads">Downloads</div>
+					<div class="item active" data-item="documents">Documents</div>
+					<div class="item" data-item="desktop">Desktop</div>
+					<div class="item" data-item="images">Images</div>
+					<div class="item" data-item="music">Music</div>
+					<div class="item" data-item="videos">Videos</div>
+					<div class="item" data-item="apps">Apps</div>
+				</div>
+				<div class="window__main hasSideBar filesys" data-visualization="icons">
+					<!--<div class="folder" data-tag="" data-name="Codepen" data-type="f" data-date="10 oct 2019" data-bytes="165.762"><div class="content"></div></div><div class="folder" data-tag="blue" data-name="University" data-type="f" data-date="3 sep 2018" data-bytes="2.745.693"><div class="content"></div></div><div class="folder" data-tag="yellow" data-name="Future backgrounds" data-type="f" data-date="2 aug 2017" data-bytes="8.374.290"><div class="content"></div></div><div class="file" data-tag="" data-name="IMG_0405.jpg" data-type="img" data-date="3 nov 2018" data-bytes="6.395.751"><div class="content" style="background-image:url(https://bit.ly/33HGY7m);"></div></div><div class="file" data-tag="" data-name="IMG_0406.jpg" data-type="img" data-date="3 nov 2018" data-bytes="4.936.117"><div class="content" style="background-image:url(https://bit.ly/2Q8IhrY);"></div></div><div class="file" data-tag="" data-name="Exercise 2 - Economy (T3).xlsx" data-type="xlsx" data-icon="excel" data-date="21 may 2018" data-bytes="23.924"><div class="content"></div></div>-->
+				</div>
+			</div>
+		</div>
+
+		<div class="window window--calendar window--minimized" data-window="calendar"
+			style="min-width:600px;width:720px;min-height:390px;height:480px;top:200px;left:600px;">
+			<div class="window__handler">
+				<div class="window__controls">
+					<a class="window__close"></a>
+					<a class="window__minimize"></a>
+					<a class="window__maximize"></a>
+				</div>
+			</div>
+			<div class="window__body">
+				<div class="calendar"></div>
+			</div>
+		</div>
+
+		<div class="window window--safari window--minimized" data-windowBackdrop="true"
+			data-window="safari" style="min-width:600px;width:1100px;min-height:390px;height:700px;top:80px;left:400px;">
+			<div class="window__handler">
+				<div class="window__controls">
+					<a class="window__close"></a>
+					<a class="window__minimize"></a>
+					<a class="window__maximize"></a>
+				</div>
+				<input class="browse" type="text" placeholder="Browse or type a web" value="unsplash.com" />
+				<ul class="tabs">
+					<li class="active" data-tabId="index.html"><a class="close"></a>index.html</li>
+					<li data-tabId="favorites"><a class="close"></a>Favorites</li>
+					<li class="new sAppSafariNewTab"></li>
+				</ul>
+			</div>
+			<div class="window__body">
+				<div class="content visible" data-tabId="index.html">
+					<h1>Sample text</h1>
+				</div>
+				<div class="content transparent" data-tabId="favorites">
+					<div style="text-align:center;">
+						<div
+							style="position:relative;display:inline-block;margin:50px 30px;width:65px;height:65px;border-radius:2px;background:rgba(255,255,255,.1);box-shadow:0 0 0 15px rgba(255,255,255,.1),0 5px 10px 15px rgba(0,0,0,.1);background-position:center center;background-size:contain;background-repeat:no-repeat;background-image:url('https://bit.ly/2Ikf4Fa');line-height:200px;font-size:85%;">
+							Youtube</div>
+						<div
+							style="position:relative;display:inline-block;margin:50px 30px;width:65px;height:65px;border-radius:2px;background:rgba(255,255,255,.1);box-shadow:0 0 0 15px rgba(255,255,255,.1),0 5px 10px 15px rgba(0,0,0,.1);background-position:center center;background-size:contain;background-repeat:no-repeat;background-image:url('http://bit.ly/2uW0914');line-height:200px;font-size:85%;">
+							Netflix</div>
+						<div
+							style="position:relative;display:inline-block;margin:50px 30px;width:65px;height:65px;border-radius:2px;background:rgba(255,255,255,.1);box-shadow:0 0 0 15px rgba(255,255,255,.1),0 5px 10px 15px rgba(0,0,0,.1);background-position:center center;background-size:contain;background-repeat:no-repeat;background-image:url('http://bit.ly/2wvkhY1');line-height:200px;font-size:85%;">
+							Drive</div>
+						<div
+							style="position:relative;display:inline-block;margin:50px 30px;width:65px;height:65px;border-radius:2px;background:rgba(255,255,255,.1);box-shadow:0 0 0 15px rgba(255,255,255,.1),0 5px 10px 15px rgba(0,0,0,.1);background-position:center center;background-size:contain;background-repeat:no-repeat;background-image:url('http://bit.ly/2To3f7n');line-height:200px;font-size:85%;">
+							Codepen</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="window window--terminal window--minimized" data-window="terminal"
+			style="width:600px;height:400px;top:16%;left:50%;">
+			<div class="window__handler">
+				<div class="window__title">Terminal</div>
+				<div class="window__controls">
+					<a class="window__close"></a>
+					<a class="window__minimize"></a>
+					<a class="window__maximize"></a>
+				</div>
+			</div>
+			<div class="window__body">
+				<div class="window__main anim sAppTerminal">
+					<div id="outputs" class="outputs"></div>
+					<div for="cmd-input" class="console-prompt-box">
+						<input id="input" type="text" class='console-input' placeholder=">" spellcheck="false" autocomplete="off">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="context" hidden></div>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://cdn.rawgit.com/desandro/masonry/master/dist/masonry.pkgd.min.js'></script>
+<script src='https://vjs.zencdn.net/5.4.6/video.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
