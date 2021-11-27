@@ -13,7 +13,8 @@
     - Menu UI
     - A Messenger app UI
     - Right click (Only Refresh is available)
-
+---
+> #### 🛑 Password = 123
 ---
 ## [Live view](https://macos-css.vercel.app)
 ---
