@@ -1192,7 +1192,7 @@ var AppExplorerData = {
 				{
 					t: "xlsx",
 					out:
-						"Hi I´m Varo, your local crazy developer, and I am trying to make an online functional OS (yeah, I am sooooo bored)"
+						"Hi I´m Chandula, your local crazy developer, and I am trying to make an online functional OS (yeah, I am sooooo bored)"
 				}
 			]
 		}
