@@ -1,5 +1,5 @@
 # macos-css
-> ### 🛑 macos-css is the next version of my other [macOS-web.](https://github.com/RedEdge967/macOS-web) You can also use that project.(Not a website)
+> #### 🛑 macos-css is the next version of my other [macOS-web.](https://github.com/RedEdge967/macOS-web) You can also use that project.(Not a website)
 ---
 ## What is macos-css
 - macos-css is my next version of [macOS-web.](https://github.com/RedEdge967/macOS-web)
@@ -12,6 +12,7 @@
     - Settings UI
     - Menu UI
     - A Messenger app UI
+    - Right click (Only Refresh is available)
 
 ---
 ## [Live view](https://macos-css.vercel.app)
