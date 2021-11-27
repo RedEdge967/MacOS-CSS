@@ -493,7 +493,7 @@ $(function() {
 				'<div class="item">Configure app banners</div><div class="item">Mute app</div><div class="sep"></div><div class="item sNotificationDiscard">Discard</div>',
 			cmNotificationWidget =
 				'<div class="item">Configure widget</div><div class="sep"></div><div class="item">Close app</div>',
-			cmNotDefined = '<div class="item">Work In Progress (Be patient)</div>';
+			cmNotDefined = '<div class="item">Refresh</div>';
 		if (target.hasClass("folder") || target.hasClass("file")) {
 			AppFilesDeselect();
 			target.addClass("selected");
