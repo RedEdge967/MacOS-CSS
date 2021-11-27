@@ -17,5 +17,5 @@
 ---
 ## [Live view](https://macos-css.vercel.app)
 ---
-## Want to Contribute?
+## Can I Contribute?
 - Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to Fork this and I appreciate it.
