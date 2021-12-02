@@ -8,7 +8,7 @@
     - Finder UI
     - Day and Night wallpapers (after 6pm, it turns in to night wallpaper)
     - Calender
-    - A notification banner
+    - Notification banner
     - Settings UI
     - Terminal
     - Apple Menu UI
