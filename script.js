@@ -1169,8 +1169,8 @@ var AppExplorerData = {
 		}
 	],
 	documents: [
-		{ t: "f", n: "Copeden", w: "2965", c: [] },
-		{ t: "f", n: "University", w: "4647639", c: [] },
+		{ t: "f", n: "Github", w: "2965", c: [] },
+		{ t: "f", n: "School", w: "4647639", c: [] },
 		{ t: "f", n: "Future Projects", w: "87465934", c: [] },
 		{
 			t: "a",
@@ -1186,7 +1186,7 @@ var AppExplorerData = {
 		},
 		{
 			t: "a",
-			n: "Exercise 2 - Economy (T3).xlsx",
+			n: "Exercise 2 - Science (T3).xlsx",
 			w: "2563",
 			c: [
 				{
