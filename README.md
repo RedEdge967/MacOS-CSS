@@ -3,20 +3,21 @@
 ---
 ## What is macos-in-css
 - macos-css is my next version of [macOS-web.](https://github.com/RedEdge967/macOS-web)
+- Made in HTML5, CSS3 and Javascript
 ---
 ## Features
-    - Time (Seconds also can be viewed)
-    - Finder UI
-    - Day and Night wallpapers (after 6pm, it turns in to night wallpaper)
-    - Calender
-    - Notification banner
-    - Settings UI
-    - Terminal
-    - Apple Menu UI
-    - A Messenger app UI
-    - Right click (Only Refresh is available)
-    - Lock screen
-    - Log out/in user
+- Time (Seconds also can be viewed)
+- Finder UI
+- Day and Night wallpapers (after 6pm, it turns in to night wallpaper)
+- Calender
+- Notification banner
+- Settings UI
+- Terminal
+- Apple Menu UI
+- A Messenger app UI
+- Right click (Only Refresh is available)
+- Lock screen
+- Log out/in user
 ---
 > #### 🛑 Password = 123
 ---
