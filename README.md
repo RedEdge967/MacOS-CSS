@@ -35,5 +35,10 @@
 ---
 ## [Live view (https://macos-css.vercel.app)](https://macos-css.vercel.app)
 ---
+### Browser Support
+![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
+---
 ## Can I Contribute?
 - Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to Fork or clone this and I appreciate it.
