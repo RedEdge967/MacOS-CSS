@@ -1,5 +1,5 @@
 # Macos Big sur web
-> #### 🛑 macos-css is the next version of my other [macOS-web.](https://github.com/RedEdge967/macOS-web) It was the v1.0 of macOS web recreation.
+> #### 🛑 macos-css is the next version of my other [macOS-web.](https://github.com/RedEdge967/macOS-web) It was the old version of macOS web recreation.
 ---
 ## What is macos-in-css
 - macos-css is my next version of [macOS-web.](https://github.com/RedEdge967/macOS-web)
