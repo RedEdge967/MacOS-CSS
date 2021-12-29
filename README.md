@@ -40,5 +40,5 @@
 --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 ---
-## Can I Contribute?
+## Can I [Contribute?](https://github.com/RedEdge967/MacOS-CSS/blob/master/CONTRIBUTING.md)
 - Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to open a pull request and I appreciate it.
