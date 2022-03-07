@@ -40,5 +40,7 @@
 --- | --- | --- | --- | --- |
 Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 ---
+### Credits
+Note this is just a new updated and improved version of [Alvaro Hernandez's Macos web](https://codepen.io/Varo/pen/BypqMJ)
 ## Can I [Contribute?](https://github.com/RedEdge967/MacOS-CSS/blob/master/CONTRIBUTING.md)
 - Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to open a pull request and I appreciate it.
