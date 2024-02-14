@@ -1,8 +1,6 @@
-# Macos Big sur web
-> #### 🛑 macos-css is the next version of my other [macOS-web.](https://github.com/RedEdge967/macOS-web) It was the old version of macOS web recreation.
+
 ---
-## What is macos-in-css
-- macos-css is my next version of [macOS-web.](https://github.com/RedEdge967/macOS-web)
+## A Recreation of MacOS
 - Made in HTML5, CSS3 and Javascript
 ---
 ## Features
@@ -33,12 +31,5 @@
 ---
 > #### 🛑 Password = 123
 ---
-## [Live view (https://macos-css.vercel.app)](https://macos-css.vercel.app)
----
-### Browser Support
-![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
----
-## Can I [Contribute?](https://github.com/RedEdge967/MacOS-CSS/blob/master/CONTRIBUTING.md)
+
 - Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to open a pull request and I appreciate it.
