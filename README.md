@@ -19,7 +19,6 @@
 - App Search
 ---
 ## Preview of MacOS Big sur web
-![Lockscreen](https://user-images.githubusercontent.com/91379432/146754775-e9649ab1-941f-4f7b-bbcd-c4caf5aeaef1.PNG)
 ![Desktop](https://user-images.githubusercontent.com/91379432/146754788-21770a76-15ab-473e-85b3-2a9e192e8726.PNG)
 ![Finder UI](https://user-images.githubusercontent.com/91379432/146754802-e84f5823-900d-4425-be53-2f8c350c6e2a.PNG)
 ![Notification bar](https://user-images.githubusercontent.com/91379432/146754804-af04b00c-6be1-460e-89f3-52d42a807089.PNG)
