@@ -28,7 +28,7 @@
 ![Top Bar](https://user-images.githubusercontent.com/91379432/146754826-42875ad1-46ca-433d-8fd5-ad5b40d2393c.PNG)
 ![App search](https://user-images.githubusercontent.com/91379432/146754832-928f245f-e3f0-4f4e-a371-643f27947655.PNG)
 ---
-> #### 🛑 Password = 123
+> #### 🛑 Password = abcde123
 ---
 - Can I Contribute?
 - Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to open a pull request and I appreciate it.
