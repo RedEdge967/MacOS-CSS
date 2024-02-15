@@ -294,7 +294,7 @@ $(function() {
 		let password = $(".systemLockInput").val();
 		$(".lockScreenLogIn").addClass("wait");
 		$(".systemLockInput").blur();
-		if (password === "123456") {
+		if (password === "abcde123") {
 			setTimeout(function() {
 				$(".lockScreen").removeClass("locked");
 				$(".lockScreenLogIn").removeClass("wait");
