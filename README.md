@@ -1,8 +1,6 @@
-# Macos Big sur web
-> #### 🛑 macos-css is the next version of my other [macOS-web.](https://github.com/RedEdge967/macOS-web) It was the old version of macOS web recreation.
+
 ---
-## What is macos-in-css
-- macos-css is my next version of [macOS-web.](https://github.com/RedEdge967/macOS-web)
+## A Recreation of MacOS
 - Made in HTML5, CSS3 and Javascript
 ---
 ## Features
@@ -21,7 +19,6 @@
 - App Search
 ---
 ## Preview of MacOS Big sur web
-![Lockscreen](https://user-images.githubusercontent.com/91379432/146754775-e9649ab1-941f-4f7b-bbcd-c4caf5aeaef1.PNG)
 ![Desktop](https://user-images.githubusercontent.com/91379432/146754788-21770a76-15ab-473e-85b3-2a9e192e8726.PNG)
 ![Finder UI](https://user-images.githubusercontent.com/91379432/146754802-e84f5823-900d-4425-be53-2f8c350c6e2a.PNG)
 ![Notification bar](https://user-images.githubusercontent.com/91379432/146754804-af04b00c-6be1-460e-89f3-52d42a807089.PNG)
@@ -31,14 +28,7 @@
 ![Top Bar](https://user-images.githubusercontent.com/91379432/146754826-42875ad1-46ca-433d-8fd5-ad5b40d2393c.PNG)
 ![App search](https://user-images.githubusercontent.com/91379432/146754832-928f245f-e3f0-4f4e-a371-643f27947655.PNG)
 ---
-> #### 🛑 Password = 123
+> #### 🛑 Password = abcde123
 ---
-## [Live view (https://macos-css.vercel.app)](https://macos-css.vercel.app)
----
-### Browser Support
-![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
----
-## Can I [Contribute?](https://github.com/RedEdge967/MacOS-CSS/blob/master/CONTRIBUTING.md)
+## Can I Contribute?
 - Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to open a pull request and I appreciate it.
